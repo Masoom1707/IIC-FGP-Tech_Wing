@@ -1,0 +1,91 @@
+nav{
+    width: 100%;
+    background-color: black;
+    padding: 1vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    color: white;
+}
+.inner-left{
+    display: flex;
+    align-items: center;
+}
+.hamburger{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.inner-left span{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+.inner-middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+}
+.inner-middle input{
+    width: 100%;
+    padding: 9.5px 10px ;
+    outline: none;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+&::placeholder{
+    font-size: 1.2vw;
+}
+}
+
+.search{
+    background-color: #dcdcdc;
+    padding: 4px 15px;
+    cursor: pointer;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 20px;
+    color: black;
+}
+.mic{
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    padding: 5px 7px;
+    cursor: pointer;
+    color: black;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    background-color: #fff;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.notifi{
+    margin: 0 3vw;
+    cursor: pointer;
+}
+.option-menu{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 9%;
+    background-color: rgb(33, 33, 33);
+}
+.option-menu p{
+    padding: 8px 8px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.option-menu p:hover{
+    background-color: black;
+}
