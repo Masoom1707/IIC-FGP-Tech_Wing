@@ -34,13 +34,14 @@
 .four_grid{
     padding: 1vw 2vw;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2vw;
 }
 
 .video_container{
     cursor: pointer;
     position: relative;
+    margin-bottom: 1.5vw;
 
 }
 .video_container > img{

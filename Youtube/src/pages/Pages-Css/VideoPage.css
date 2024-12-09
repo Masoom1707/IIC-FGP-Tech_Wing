@@ -1,0 +1,161 @@
+.video_page_container{
+    min-height: 100vh;
+    margin-top: 4vw;
+    display: flex;
+    gap: 1vw;
+    background-color: black;
+}
+.left_side{
+    flex-basis: 70%;
+ padding: 2vw 2vw;
+}
+.left_side video{
+    margin-top: 2vw;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title{
+    width: 100%;
+}
+.title > p{
+    font-size: 1.5vw;
+    color: white;
+    margin: 4px 0;
+    cursor: pointer;
+}
+.title_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile_div{
+    display: flex;
+    align-items: center;
+}
+.profile_pic{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.profile_name{
+    margin: 0 1.2vw;
+    cursor: pointer;
+}
+.name{
+    font-size: 1.3vw;
+    color: white;
+
+}
+.subs_count{
+    color: rgb(88, 88, 88);
+}
+.subs{
+    background-color: #fff;
+    padding: 0.5vw 2vw;
+    border-radius: 1.4vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+
+}
+
+.like_disLike_container{
+    display: flex;
+    gap: 2vw;
+    color: white;
+}
+.description{
+    background-color: #d0d0d0cf;
+    margin: 2vw 0;
+    padding: 1vw 1.3vw;
+    border-radius: 10px;
+}
+
+.comment_input{
+    display: flex;
+}
+.comment_input img{
+    width: 3vw;
+    border-radius: 50%;
+}
+.input_div{
+    width: 100%;
+}
+.comment_section input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0.7vw 1vw;
+    border-bottom: 1px solid rgb(93, 93, 93);
+    color: white;
+}
+
+.cancel_comment{
+    display: flex;
+    margin-top: 1vw;
+    justify-content: flex-end;
+    gap: 1.5vw;
+}
+.comment_button{
+    padding: 8px 20px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 2vw;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.hover1:hover{
+    background-color: #fff;
+    color: black;
+}
+.hover2:hover{
+    background-color: #005cf1;
+    color: #ffffff;
+    border: none;
+}
+
+.input_div h3{
+    color: white;
+    margin-left: 1vw;
+}
+.input_div span{
+    color: #707070;
+    font-size: 13px;
+}
+.input_div .comment{
+    color: white;
+    margin-left: 1vw;
+    margin-top: 0.3vw;
+
+}
+.comments{
+    margin-bottom: 2vw;
+}
+
+
+
+
+.right_side{
+    flex-basis: 27%;
+    padding: 5vw 1vw;
+}
+.recomendation{
+    display: flex;
+    gap: 0.6vw;
+    margin-bottom: 1.5vw;
+}
+.image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.details .title{
+    color: white;
+}
+.channel_name{
+    color: #707070;
+    font-weight: 500;
+    font-size: 13px;
+}

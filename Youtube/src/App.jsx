@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
+import { Route, Routes } from 'react-router-dom'
+import VideoPage from './pages/VideoPage'
+
 
 function App() {
   const [toggleSideNavbar, setToggleSideNavbar] = useState(true)
@@ -12,7 +15,11 @@ function App() {
   return (
     <>
       <Navbar sidenavFn={sidenavFn} toggleSideNavbar={toggleSideNavbar} />
-      <HomePage toggleSideNavbar={toggleSideNavbar} />
+      <Routes>
+        <Route path='/' element={<HomePage toggleSideNavbar={toggleSideNavbar} />}/>
+        <Route path='/watch/:id' element={<VideoPage/>} />
+      </Routes>
+      
     </>
   )
 }
