@@ -9,18 +9,25 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-const Navbar = () => {
+const Navbar = ({sidenavFn, toggleSideNavbar}) => {
   const [userPic, setUserPic] = React.useState('')
   const [openMenu, setOpenMenu] = React.useState(false)
   
   const handleOpenMenu = () => {
     setOpenMenu(prev => !prev);
   }
+
+  const toglleSideNav  = () => {
+    sidenavFn(!toggleSideNavbar)
+  }
+
+
+  
   return (
     <nav>
       <div className="nav-left">
-        <div className="inner-left">
-          <MenuIcon sx={{color:"white"}} className="hamburger"/>
+        <div className="inner-left" >
+          <div onClick={toglleSideNav}><MenuIcon sx={{color:"white"}} className="hamburger" /></div>
           <YouTubeIcon sx={{color:"red"}} /> <span>MastTube</span>
         </div>
       </div>

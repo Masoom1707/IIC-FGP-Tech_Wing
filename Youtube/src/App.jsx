@@ -1,14 +1,18 @@
+import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 
 function App() {
-
+  const [toggleSideNavbar, setToggleSideNavbar] = useState(true)
+  const sidenavFn = (value) => {
+    setToggleSideNavbar(value)
+  }
 
   return (
     <>
-      <Navbar />
-      <HomePage />
+      <Navbar sidenavFn={sidenavFn} toggleSideNavbar={toggleSideNavbar} />
+      <HomePage toggleSideNavbar={toggleSideNavbar} />
     </>
   )
 }

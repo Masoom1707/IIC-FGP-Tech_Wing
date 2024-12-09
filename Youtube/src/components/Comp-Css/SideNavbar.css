@@ -1,8 +1,13 @@
+.hideSideNav{
+    display: none;
+}
+
 .side-nav{
     width: 20%;
     padding: 1vw 1vw;
     overflow-y: scroll;
     height: 86.7vh;
+
 }
 .side-nav::-webkit-scrollbar{
     display: none;

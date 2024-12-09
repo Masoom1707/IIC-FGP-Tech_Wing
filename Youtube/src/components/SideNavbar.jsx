@@ -11,9 +11,9 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 
-const SideNavbar = () => {
+const SideNavbar = ({toggleSideNavbar}) => {
   return (
-    <div className="side-nav">
+    <div className={toggleSideNavbar?"side-nav":'hideSideNav'}>
         <div><HomeIcon /><span>Home</span></div>
         <div><VideoCallIcon /><span>Shorts</span></div>
         <div><SubscriptionsIcon /><span>Subscription</span></div>
