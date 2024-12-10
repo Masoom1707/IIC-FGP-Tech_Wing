@@ -27,7 +27,10 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
     navigation('/@user/1710')
     setOpenMenu(false)
   }
-
+  const handleLogin = () => {
+    navigation('/login')
+    setOpenMenu(false)
+  }
   
   return (
     <nav>
@@ -47,14 +50,14 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
         </div>
       </div>
       <div className="nav-right">
-        <VideoCallIcon sx={{color:"white", cursor:"pointer", fontSize:"30px"}} className="hover" />
+       <NavLink to={'/create/1710'}> <VideoCallIcon sx={{color:"white", cursor:"pointer", fontSize:"30px"}} className="hover" /></NavLink>
         <NotificationsIcon sx={{color:"white"}} className="notifi hover" />
         <img onClick={handleOpenMenu} src={userPic} className="profile"></img>
       </div>
       { openMenu &&
       <div className="option-menu">
         <p onClick={handleProfileNavigation}>Profile</p>
-        <p>Log-In</p>
+        <NavLink onClick={handleLogin} to={'/login'}><p>Log-In</p></NavLink>
         <p>Log-Out</p>
         <p>Settings</p>
       </div>

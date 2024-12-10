@@ -1,0 +1,38 @@
+.login_div{
+    width: 30%;
+    text-align: center;
+}
+.login_div h2{
+    margin-bottom: 2vw;
+    font-size: 3vw;
+    color: red;
+}
+.login_div input{
+    display: block;
+    width: 100%;
+    padding: 1vw 1vw;
+    border: none;
+    outline: none;
+    margin-bottom: 1.3vw;
+    border-radius: 3vw;
+}
+.login_div > a{
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+    width: 100%;
+    padding: 0.8vw 0;
+    margin-bottom: 1vw;
+    border-radius: 3vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.login_div p{
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: white;
+}
+.login_div p a{
+    color: red;
+}
