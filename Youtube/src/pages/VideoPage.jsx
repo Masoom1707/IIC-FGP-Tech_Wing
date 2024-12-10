@@ -1,5 +1,6 @@
 import React from "react";
 import "./Pages-Css/VideoPage.css";
+import { NavLink } from "react-router-dom";
 
 const VideoPage = () => {
   return (
@@ -13,13 +14,13 @@ const VideoPage = () => {
           <p>Learn React In 20 minutes</p>
           <div className="title_container">
             <div className="profile_div">
-              <div className="profile_pic">
+              <NavLink to={'/@user/1710'} className="profile_pic">
                 <img src="#" alt="" />
-              </div>
-              <div className="profile_name">
+              </NavLink>
+              <NavLink to={'/@user/1710'} className="profile_name">
                 <p className="name">Masoom</p>
                 <p className="subs_count">298k subscriber</p>
-              </div>
+              </NavLink>
               <div className="subs">
                 <p>Subscribe</p>
               </div>
@@ -31,7 +32,7 @@ const VideoPage = () => {
             </div>
           </div>
           <div className="description">
-            <h2>35,332 views 9 Dec 2024</h2>
+            <h3>35,332 views 9 Dec 2024</h3>
             <p>Hey every one enjoy my youtube video</p>
           </div>
 

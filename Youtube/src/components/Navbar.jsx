@@ -1,5 +1,6 @@
 import React from "react";
 import "./Comp-Css/Navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -21,6 +22,11 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
     sidenavFn(!toggleSideNavbar)
   }
 
+  const navigation = useNavigate()
+  const handleProfileNavigation = () => {
+    navigation('/@user/1710')
+    setOpenMenu(false)
+  }
 
   
   return (
@@ -28,7 +34,7 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
       <div className="nav-left">
         <div className="inner-left" >
           <div onClick={toglleSideNav}><MenuIcon sx={{color:"white"}} className="hamburger" /></div>
-          <YouTubeIcon sx={{color:"red"}} /> <span>MastTube</span>
+          <NavLink to={'/'} className="youtube_icon"><YouTubeIcon sx={{color:"red"}}  /> <span>MastTube</span></NavLink>
         </div>
       </div>
       <div className="nav-middle">
@@ -47,7 +53,7 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
       </div>
       { openMenu &&
       <div className="option-menu">
-        <p>Profile</p>
+        <p onClick={handleProfileNavigation}>Profile</p>
         <p>Log-In</p>
         <p>Log-Out</p>
         <p>Settings</p>

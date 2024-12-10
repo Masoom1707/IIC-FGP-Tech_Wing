@@ -18,6 +18,10 @@ nav{
     margin-right: 20px;
     cursor: pointer;
 }
+.youtube_icon{
+    display: flex;
+    align-items: center;
+}
 .inner-left span{
     font-size: 1.4vw;
     font-weight: 500;

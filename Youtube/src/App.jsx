@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import { Route, Routes } from 'react-router-dom'
 import VideoPage from './pages/VideoPage'
+import ProfilePage from './pages/ProfilePage'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage toggleSideNavbar={toggleSideNavbar} />}/>
         <Route path='/watch/:id' element={<VideoPage/>} />
+        <Route path='/@user/:id' element={<ProfilePage toggleSideNavbar={toggleSideNavbar} />} />
       </Routes>
       
     </>

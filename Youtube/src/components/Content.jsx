@@ -1,5 +1,6 @@
 import React from "react";
 import './Comp-Css/Content.css'
+import VideoCard from "./VideoCard";
 
 const Content = ({toggleSideNavbar}) => {
 
@@ -24,103 +25,8 @@ const Content = ({toggleSideNavbar}) => {
         <a href="#">Sports</a>
         
       </div>
-      <div className={toggleSideNavbar ? "video_card_section" : 'four_grid' }>
 
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div className="video_container">
-          <img src="../public/images.jpg" alt="Thumbnail" />
-          <span>29:34</span>
-          <div className="user_detail">
-            <div className="video_profile">
-              <img src="../public/images (1).jpg" alt="video_profile" />
-            </div>
-          <div className="detail">
-            <p className="title">How to get select in IIC   </p>
-            <h3>Masoom</h3>
-            <p className="views">459k <span>3 days ago</span></p>
-          </div>
-        </div>
-        </div>
-        
-        
-      </div>
-
-      
-
+      <VideoCard toggleSideNavbar={toggleSideNavbar} />
       
     </div>
   );
