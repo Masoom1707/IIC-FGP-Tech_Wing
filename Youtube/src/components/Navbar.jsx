@@ -10,9 +10,13 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
+import Login from "../pages/Login";
+
 const Navbar = ({sidenavFn, toggleSideNavbar}) => {
   const [userPic, setUserPic] = React.useState('')
   const [openMenu, setOpenMenu] = React.useState(false)
+  const [loginPop, setLoginPop] = React.useState(false)
+
   
   const handleOpenMenu = () => {
     setOpenMenu(prev => !prev);
@@ -27,12 +31,21 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
     navigation('/@user/1710')
     setOpenMenu(false)
   }
-  const handleLogin = () => {
-    navigation('/login')
+
+  
+  const handleLogin = (button) => {
+    if(button === 'login'){
+      setLoginPop(true)
+    }
     setOpenMenu(false)
+
+  }
+  const removeLoginPop = () => {
+    setLoginPop(false)
   }
   
   return (
+    <>
     <nav>
       <div className="nav-left">
         <div className="inner-left" >
@@ -57,12 +70,16 @@ const Navbar = ({sidenavFn, toggleSideNavbar}) => {
       { openMenu &&
       <div className="option-menu">
         <p onClick={handleProfileNavigation}>Profile</p>
-        <NavLink onClick={handleLogin} to={'/login'}><p>Log-In</p></NavLink>
-        <p>Log-Out</p>
+        <p onClick={() => handleLogin('login')}>Log-In</p>
+        <p onClick={() => handleLogout('logout')}>Log-Out</p>
         <p>Settings</p>
       </div>
       }
     </nav>
+    {
+      loginPop && <Login removeLoginPop={removeLoginPop} />
+    }
+    </>
   );
 };
 
