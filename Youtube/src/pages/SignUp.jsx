@@ -6,12 +6,13 @@ import axios from "axios";
 
 const SignUp = () => {
   const [signupHandling, setSignupHandling] = useState({
-    channelName: "",
+    Email: "",
     userName: "",
     Password: "",
     About: "",
     profile: "",
   });
+
   const signupFormHandling = (e) => {
     const { name, value } = e.target;
     setSignupHandling((prev) => ({ ...prev, [name]: value }));
@@ -46,10 +47,10 @@ const SignUp = () => {
         <h2>Create Account</h2>
         <div className="upload_form">
           <input
-            type="text"
-            placeholder="Channel Name"
-            name="channelName"
-            value={signupHandling.channelName}
+            type="email"
+            placeholder="Enter E-mail"
+            name="Email"
+            value={signupHandling.Email}
             onChange={signupFormHandling}
           />
           <input

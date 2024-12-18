@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "./Pages-Css/Login.css";
 import { NavLink } from "react-router-dom";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const Login = ({ removeLoginPop }) => {
+  const [showPassword, setShowPassword] = useState(true);
+  const handleToggle = () => {
+    setShowPassword(!showPassword);
+  };
+
   const [loginHandling, setLoginHandling] = useState({
     Email: "",
     Password: "",
@@ -27,14 +34,21 @@ const Login = ({ removeLoginPop }) => {
           required
           onChange={handleLoginForm}
         />
-        <input
-          type="password"
-          name="Password"
-          value={loginHandling.Password}
-          placeholder="Password"
-          required
-          onChange={handleLoginForm}
-        />
+        <div className="toggle_password">
+          <input
+            type={showPassword ? "password" : "text"}
+            name="Password"
+            value={loginHandling.Password}
+            placeholder="Password"
+            required
+            onChange={handleLoginForm}
+          />
+          {showPassword ? 
+            <VisibilityIcon onClick={handleToggle} className="toggle_style" />
+           : 
+            <VisibilityOffIcon onClick={handleToggle} className="toggle_style" />
+          }
+        </div>
         <NavLink to={"/login"} onClick={handleLoginSubmit}>
           Log In
         </NavLink>
