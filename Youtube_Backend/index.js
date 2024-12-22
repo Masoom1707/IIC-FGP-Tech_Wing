@@ -1,9 +1,19 @@
-const express = require('express')
+import express from "express";
+import { connectDb } from "./Connection/dbconn.js";
 
-const app = express()
-
+const app = express();
 const PORT = 3000;
 
-app.listen(PORT, () => {
-    console.log(`Running on Port ${PORT}`);
-})
+app.use(express.json());
+
+
+connectDb().then(() => {
+  try {
+    app.listen(PORT, () => {
+      console.log(`listening on ${PORT}`);
+    });
+  } catch (error) {
+    console.log('Some error occured in starting the server', error);
+  }
+});
+

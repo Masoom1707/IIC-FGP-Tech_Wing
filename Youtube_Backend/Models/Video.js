@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose"
 
 const videoSchema = new mongoose({
     user:{
@@ -9,6 +9,7 @@ const videoSchema = new mongoose({
     title:{
         type:String,
         required:true
+        
     },
     description:{
         type:String,
@@ -23,4 +24,4 @@ const videoSchema = new mongoose({
     },
 },{timestamps:true})
 
-module.exports = mongoose.model('Video', videoSchema)
+export const video = mongoose.model('Video', videoSchema)
