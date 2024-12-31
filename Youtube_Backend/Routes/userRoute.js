@@ -1,8 +1,7 @@
 import express from 'express'
-import userController from '../Controllers/userController'
+import { signIn, signUp } from '../Controllers/userController.js'
 
 export const router = express.Router()
 
-router.post('/signup', userController.signUp)
-
-
+router.post('/signup', signUp)
+router.post('/login', signIn)

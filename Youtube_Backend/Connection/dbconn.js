@@ -1,28 +1,32 @@
-import { MongoClient } from "mongodb";
-import dotenv from 'dotenv'
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
-
-let client
 export const connectDb = async () => {
   try {
+    
+    // Connect to MongoDB using Mongoose
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 30000,
+    });
 
-    // connect to mongoDB
-    client = new MongoClient(process.env.MONGO_URI);
-    await client.connect();
-    console.log("Database Connected ");
-
+    console.log('Connected to MongoDB using Mongoose');
   } catch (error) {
-    console.error("Error in Connection", error);
+    console.error('Error connecting to MongoDB using Mongoose:', error);
     process.exit(1);
   }
 };
 
-process.on("SIGINT", async () => {
-    if (client) {
-      await client.close();
-      console.log("Database connection closed");
-    }
+process.on('SIGINT', async () => {
+  try {
+    await mongoose.connection.close();
+    console.log('Mongoose connection closed');
     process.exit(0);
-  });
+  } catch (error) {
+    console.error('Error closing Mongoose connection:', error);
+    process.exit(1);
+  }
+});
