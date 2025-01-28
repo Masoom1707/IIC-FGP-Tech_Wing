@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const videoSchema = new mongoose({
+const videoSchema = new mongoose.Schema({
     user:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'User',
@@ -22,6 +22,16 @@ const videoSchema = new mongoose({
         type:String,
         required:true
     },
+    videoType: String,
+    like: {
+        type: Number,
+        default: 0
+    },
+    dislike: {
+        type: Number,
+        default: 0
+    }
+
 },{timestamps:true})
 
 export const video = mongoose.model('Video', videoSchema)
