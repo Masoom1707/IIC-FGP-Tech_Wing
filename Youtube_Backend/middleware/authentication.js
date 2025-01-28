@@ -10,11 +10,9 @@ export const authentication = async (req, res, next) => {
   } else {
     try {
       const verifyJwt = jwt.verify(token, "secret_key");
-
       const foundUser = await user
         .findById(verifyJwt.userId)
         .select("-password");
-        
       if (!foundUser) {
         return res.status(404).json({ error: "User not found" });
       }
