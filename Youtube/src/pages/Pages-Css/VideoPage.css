@@ -29,15 +29,19 @@
     align-items: center;
     justify-content: space-between;
 }
-.profile_div{
+.profile_detail_container{
     display: flex;
     align-items: center;
 }
-.profile_pic{
-    width: 3vw;
-    height: 3vw;
+.profile_div{
+    width: 8vh;
+    height: 8vh;
     border-radius: 50%;
-    background-color: #fff;
+}
+.profile_div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     cursor: pointer;
 }
 .profile_name{

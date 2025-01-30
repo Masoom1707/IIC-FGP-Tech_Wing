@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Pages-Css/ProfilePage.css";
 import SideNavbar from "../components/SideNavbar";
 import VideoCard from "../components/VideoCard";
 import { NavLink } from "react-router-dom";
+import axios from 'axios'
+import {useParams} from 'react-router-dom'
 
 const ProfilePage = ({ toggleSideNavbar }) => {
+
+  const fetchUserById = async() => {
+    await axios.get(``)
+  }
+
+  useEffect(() => {
+    fetchUserById();
+  }, [])
+
   return (
     <div className="home-container">
       <SideNavbar toggleSideNavbar={toggleSideNavbar} />
